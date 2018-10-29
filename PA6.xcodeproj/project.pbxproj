@@ -14,7 +14,6 @@
 		312C7E382182935000996939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312C7E372182935000996939 /* Main.storyboard */; };
 		312C7E3A2182939A00996939 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C7E392182939A00996939 /* TripTableViewCell.swift */; };
 		312C7E3C218293C000996939 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C7E3B218293C000996939 /* TripDetailViewController.swift */; };
-		312C7E3E218293E800996939 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C7E3D218293E800996939 /* Dog.swift */; };
 		312C7E42218295D900996939 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C7E41218295D900996939 /* Trip.swift */; };
 		312C7E4421864BF500996939 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C7E4321864BF500996939 /* AddTripViewController.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +28,6 @@
 		312C7E372182935000996939 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		312C7E392182939A00996939 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		312C7E3B218293C000996939 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
-		312C7E3D218293E800996939 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		312C7E41218295D900996939 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		312C7E4321864BF500996939 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +66,6 @@
 				312C7E2721828F5300996939 /* TripTableViewController.swift */,
 				312C7E392182939A00996939 /* TripTableViewCell.swift */,
 				312C7E3B218293C000996939 /* TripDetailViewController.swift */,
-				312C7E3D218293E800996939 /* Dog.swift */,
 				312C7E41218295D900996939 /* Trip.swift */,
 				312C7E4321864BF500996939 /* AddTripViewController.swift */,
 				312C7E2C21828F5700996939 /* Assets.xcassets */,
@@ -155,7 +152,6 @@
 				312C7E3C218293C000996939 /* TripDetailViewController.swift in Sources */,
 				312C7E2821828F5300996939 /* TripTableViewController.swift in Sources */,
 				312C7E2621828F5300996939 /* AppDelegate.swift in Sources */,
-				312C7E3E218293E800996939 /* Dog.swift in Sources */,
 				312C7E3A2182939A00996939 /* TripTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

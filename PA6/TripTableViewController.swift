@@ -20,11 +20,11 @@ class TripTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func initializeTrips() {
-        trips.append(Trip(destinationIn: "Fiji", startIn: "01/26/19", endIn: "02/13/19", imageNameIn: "Fuiji.jpg"))
-        trips.append(Trip(destinationIn: "Australia", startIn: "04/26/19", endIn: "05/13/19", imageNameIn: "Fuiji.jpg"))
-        trips.append(Trip(destinationIn: "Portugal", startIn: "08/26/19", endIn: "09/13/19", imageNameIn: "Fuiji.jpg"))
-        trips.append(Trip(destinationIn: "New Zealand", startIn: "09/26/19", endIn: "10/13/19", imageNameIn: "Fuiji.jpg"))
-        trips.append(Trip(destinationIn: "Alaska", startIn: "11/26/19", endIn: "12/13/19", imageNameIn: "Fuiji.jpg"))
+        trips.append(Trip(destinationIn: "Fiji", startIn: "01/26/2019", endIn: "02/13/2019", imageNameIn: "Fuiji.jpg"))
+        trips.append(Trip(destinationIn: "Australia", startIn: "04/26/2019", endIn: "05/13/2019", imageNameIn: "Australia.jpg"))
+        trips.append(Trip(destinationIn: "Portugal", startIn: "08/26/2019", endIn: "09/13/2019", imageNameIn: "Portugal.jpg"))
+        trips.append(Trip(destinationIn: "New Zealand", startIn: "09/26/2019", endIn: "10/13/2019", imageNameIn: "NewZealand.jpg"))
+        trips.append(Trip(destinationIn: "Alaska", startIn: "11/26/2019", endIn: "12/13/2019", imageNameIn: "Alaska.jpg"))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,11 +73,19 @@ class TripTableViewController: UIViewController, UITableViewDataSource, UITableV
                     if let indexPath = tableView.indexPathForSelectedRow {
                         let trip = trips[indexPath.row]
                         tripDetailVC.trip = trip
+                        tripDetailVC.numberOfTrips = trips.count
+                        tripDetailVC.currentTripNumber =  indexPath.row + 1
+                        print(trips.count)
+                        print(indexPath.row)
                     }
                 }
             }
             else if identifier == "AddSegue" {
                 print("Adding a new trip")
+                if let addTripVC = segue.destination as? AddTripViewController {
+                    addTripVC.newTripNum = trips.count + 1
+                    print(addTripVC.newTripNum)
+                }
             }
         }
     }

@@ -12,28 +12,34 @@ class TripDetailViewController: UIViewController {
     
     // add a property so the TripTableViewController can pass in a Trip
     var trip: Trip? = nil
+    var numberOfTrips: Int? = nil
+    var currentTripNumber: Int? = nil
 
     @IBOutlet var destination: UILabel!
     @IBOutlet var startDate: UILabel!
     @IBOutlet var endDate: UILabel!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var tripNumber: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
+        displayTrip()
+    }
+    
+    func displayTrip(){
         if let trip = trip {
             // TODO: update the view to show this dog's name and breed
             destination.text = trip.getDestinationName()
             startDate.text = trip.getStartDate()
             endDate.text = trip.getEndDate()
-            if let imageName = trip.imageFileName{
+            if trip.imageFileName != nil{
                 imageView.image = UIImage(named: trip.imageFileName!)
             }
+            if let currNum = currentTripNumber, let totalNum = numberOfTrips{
+                tripNumber.text = "Trip \(currNum) of \(totalNum)"
+            }
         }
-        
     }
     
 }
